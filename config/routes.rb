@@ -1,8 +1,9 @@
 Shoplist::Application.routes.draw do
   
-  resources :places
-
   devise_for :users
+  
+  resources :items
+  resources :places
   resources :lists
   resources :products
   

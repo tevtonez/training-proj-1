@@ -11,10 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150117210827) do
+ActiveRecord::Schema.define(version: 20150117221237) do
 
   create_table "lists", force: true do |t|
-    t.integer  "list_id"
     t.string   "product"
     t.string   "quantity"
     t.string   "place"

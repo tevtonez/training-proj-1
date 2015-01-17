@@ -1,3 +1,3 @@
 # training-proj-1
 
-spent hours: 2
+spent hours: 2.5

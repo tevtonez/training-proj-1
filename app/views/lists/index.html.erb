@@ -4,9 +4,8 @@
   <thead>
     <tr>
       <th>List</th>
-      <th>Product</th>
-      <th>Quantity</th>
-      <th>Place</th>
+      <th>List name</th>
+      <th>User</th>
       <th></th>
       <th></th>
       <th></th>
@@ -17,9 +16,8 @@
     <% @lists.each do |list| %>
       <tr>
         <td><%= list.list_id %></td>
-        <td><%= list.product %></td>
-        <td><%= list.quantity %></td>
-        <td><%= list.place %></td>
+        <td><%= list.list_name %></td>
+        <td><%= list.user_id %></td>
         <td><%= link_to 'Show', list %></td>
         <td><%= link_to 'Edit', edit_list_path(list) %></td>
         <td><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Shoplist::Application.config.secret_key_base = '4eb512baff91b35675485fcdf65d92990474d13a4433d5737920bed1566ddddc469ab387417f4ce27f40b2250c9b728e4b7c943fa800f62b5f8ef4c45517d375'
+Shoplist::Application.config.secret_key_base = '707922abdbf21b631b4152f9eb50ab5a7db7c111f4ff1d662700b1dde6fe8e8dfa156229441fff38327bca9daa1b9a87f25381be4810a383ed59451589ffe0d0'

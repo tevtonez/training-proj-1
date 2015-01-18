@@ -11,24 +11,22 @@
     </div>
   <% end %>
 
+  <!--
   <div class="field">
     <%= f.label :list_id %><br>
     <%= f.number_field :list_id %>
   </div>
+  -->
   <div class="field">
-    <%= f.label :product %><br>
-    <%= f.collection_select(:product, Product.all, :title, :title) %>
-
+    <%= f.label :list_name %><br>
+    <%= f.text_field :list_name %>
   </div>
+  <!--
   <div class="field">
-    <%= f.label :quantity %><br>
-    <%= f.text_field :quantity %>
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
   </div>
-  <div class="field">
-    <%= f.label :place %><br>
-    <%= f.collection_select(:place, Place.all, :title, :title) %>
-
-  </div>
+  -->
   <div class="actions">
     <%= f.submit %>
   </div>

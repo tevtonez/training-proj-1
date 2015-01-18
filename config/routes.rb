@@ -1,13 +1,11 @@
 Shoplist::Application.routes.draw do
   
-  devise_for :users
-  
-  resources :items
-  resources :places
-  resources :lists
-  resources :products
-  
   root 'lists#index'
+  
+  resources :products
+  resources :places
+  resources :items
+  resources :lists
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

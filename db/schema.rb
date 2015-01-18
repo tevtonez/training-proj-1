@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150117234240) do
+ActiveRecord::Schema.define(version: 20150118113615) do
 
   create_table "items", force: true do |t|
     t.integer  "item_id"
@@ -24,11 +24,11 @@ ActiveRecord::Schema.define(version: 20150117234240) do
   end
 
   create_table "lists", force: true do |t|
+    t.integer  "list_id"
+    t.string   "list_name"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "list_name"
-    t.integer  "list_id"
-    t.string   "User_id"
   end
 
   create_table "places", force: true do |t|
@@ -38,22 +38,10 @@ ActiveRecord::Schema.define(version: 20150117234240) do
   end
 
   create_table "products", force: true do |t|
-    t.string   "title"
+    t.string   "article"
     t.string   "place"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  create_table "users", force: true do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end

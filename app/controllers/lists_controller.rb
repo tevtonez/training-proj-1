@@ -1,6 +1,5 @@
 class ListsController < ApplicationController
   before_action :set_list, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!  
 
   # GET /lists
   # GET /lists.json
@@ -16,7 +15,6 @@ class ListsController < ApplicationController
   # GET /lists/new
   def new
     @list = List.new
-    
   end
 
   # GET /lists/1/edit
@@ -71,6 +69,6 @@ class ListsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def list_params
-      params.require(:list).permit(:list_id, :product, :quantity, :place)
+      params.require(:list).permit(:list_id, :list_name, :user_id)
     end
 end

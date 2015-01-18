@@ -43,10 +43,3 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
-#====================================
-# Added by me!!!!!
-#====================================
-
-# Authentication
-gem 'devise', '~> 3.0.0.rc'

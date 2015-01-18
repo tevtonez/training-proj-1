@@ -1,4 +1,4 @@
 class Item < ActiveRecord::Base
-  has_one :product
   belongs_to :list
+  has_one :product
 end

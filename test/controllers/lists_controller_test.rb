@@ -18,7 +18,7 @@ class ListsControllerTest < ActionController::TestCase
 
   test "should create list" do
     assert_difference('List.count') do
-      post :create, list: { list_id: @list.list_id, place: @list.place, product: @list.product, quantity: @list.quantity }
+      post :create, list: { list_id: @list.list_id, list_name: @list.list_name, user_id: @list.user_id }
     end
 
     assert_redirected_to list_path(assigns(:list))
@@ -35,7 +35,7 @@ class ListsControllerTest < ActionController::TestCase
   end
 
   test "should update list" do
-    patch :update, id: @list, list: { list_id: @list.list_id, place: @list.place, product: @list.product, quantity: @list.quantity }
+    patch :update, id: @list, list: { list_id: @list.list_id, list_name: @list.list_name, user_id: @list.user_id }
     assert_redirected_to list_path(assigns(:list))
   end
 

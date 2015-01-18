@@ -2,12 +2,10 @@
 
 one:
   list_id: 1
-  product: MyString
-  quantity: MyString
-  place: MyString
+  list_name: MyString
+  user_id: 1
 
 two:
   list_id: 1
-  product: MyString
-  quantity: MyString
-  place: MyString
+  list_name: MyString
+  user_id: 1

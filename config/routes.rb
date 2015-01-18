@@ -1,5 +1,6 @@
 Shoplist::Application.routes.draw do
   
+  devise_for :users
   root 'lists#index'
   
   resources :products

@@ -7,3 +7,14 @@ class User < ActiveRecord::Base
          
   has_many :lists
 end
+
+
+def curr_user_id
+  id = User.find(current_user)[:id]
+  return id
+end
+
+def curr_user_email
+  name = User.find(current_user)[:email]
+  return name
+end

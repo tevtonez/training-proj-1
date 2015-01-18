@@ -11,22 +11,20 @@
     </div>
   <% end %>
 
-  <!--
+  
   <div class="field">
     <%= f.label :list_id %><br>
-    <%= f.number_field :list_id %>
+    <%= f.text_field :list_id, :value => curr_list_id, :readonly => true %>
   </div>
-  -->
+  
   <div class="field">
     <%= f.label :list_name %><br>
     <%= f.text_field :list_name %>
   </div>
-  <!--
   <div class="field">
     <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
+    <%= f.text_field :user_id, :value => curr_user_id, :readonly => true %>
   </div>
-  -->
   <div class="actions">
     <%= f.submit %>
   </div>

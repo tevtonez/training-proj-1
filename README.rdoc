@@ -21,7 +21,7 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* spent time: 5 hrs
+* spent time: 7.5 hrs
 
 
 Please feel free to use a different markup language if you do not plan to run

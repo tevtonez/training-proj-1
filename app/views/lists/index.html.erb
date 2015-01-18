@@ -1,29 +1,26 @@
 <h1>Listing lists</h1>
 
-<table>
-  <thead>
+<table border = 1>
     <tr>
-      <!-- <th>List</th>  -->
-      <th>List name</th>
-      <th>User</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <td>1List ID</td>
+      <td>2List name</td>
+      <td>3User</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
     </tr>
-  </thead>
 
-  <tbody>
     <% @lists.each do |list| %>
       <tr>
-        <!-- <td><%= list.list_id %></td> -->
-        <td><%= list.list_name %></td>
-        <td><%= list.user_id %></td>
-        <td><%= link_to 'Show', list %></td>
-        <td><%= link_to 'Edit', edit_list_path(list) %></td>
-        <td><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="list_id"><%= list.list_id %></td
+        <td class="list_name"><%= list.list_name %></td>
+        <td class="user_email"><%= created_by_email(list.id)  %></td>
+        <td class="link_to_Show"><%= link_to 'Show', list %></td>
+        <td class="link_to_Edit"><%= link_to 'Edit', edit_list_path(list) %></td>
+        <td class="link_to_Destroy"><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
-  </tbody>
+  
 </table>
 
 <br>

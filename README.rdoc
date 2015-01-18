@@ -3,7 +3,12 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+== Issues
+1. The message "Item updated/created" is duplicated
+2. the Lists' names aren't in place on the main page.
+
+
+========================
 
 * Ruby version
 

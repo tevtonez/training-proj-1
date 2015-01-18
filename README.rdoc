@@ -1,14 +1,13 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I'm writing this app for educational purposes.
 
 == Issues
 1. The message "Item updated/created" is duplicated
 2. the Lists' names aren't in place on the main page.
 
 
-========================
+== Tech Info
 
 * Ruby version
 
@@ -26,8 +25,5 @@ application up and running.
 
 * Deployment instructions
 
-* spent time: 7.5 hrs
+* spent time: 8 hrs
 
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.

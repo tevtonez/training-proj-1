@@ -3,10 +3,9 @@
 <table>
   <thead>
     <tr>
-      <th>Item</th>
-      <th>Product</th>
+      <th>Product_id</th>
       <th>Quantity</th>
-      <th>Place</th>
+      <th>Place_id</th>
       <th>List</th>
       <th></th>
       <th></th>
@@ -17,10 +16,9 @@
   <tbody>
     <% @items.each do |item| %>
       <tr>
-        <td><%= item.item_id %></td>
-        <td><%= item.product %></td>
+        <td><%= item.product_id %></td>
         <td><%= item.quantity %></td>
-        <td><%= item.place %></td>
+        <td><%= item.place_id %></td>
         <td><%= item.list_id %></td>
         <td><%= link_to 'Show', item %></td>
         <td><%= link_to 'Edit', edit_item_path(item) %></td>

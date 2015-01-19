@@ -12,20 +12,16 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :item_id %><br>
-    <%= f.number_field :item_id %>
-  </div>
-  <div class="field">
-    <%= f.label :product %><br>
-    <%= f.text_field :product %>
+    <%= f.label :product_id %><br>
+    <%= f.collection_select :product_id, Product.all, :id, :article %>    
   </div>
   <div class="field">
     <%= f.label :quantity %><br>
     <%= f.text_field :quantity %>
   </div>
   <div class="field">
-    <%= f.label :place %><br>
-    <%= f.text_field :place %>
+    <%= f.label :place_id %><br>
+    <%= f.collection_select :place_id, Place.all.order(:title), :id, :title %>
   </div>
   <div class="field">
     <%= f.label :list_id %><br>

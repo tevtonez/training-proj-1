@@ -11,13 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150119110003) do
+ActiveRecord::Schema.define(version: 20150119170457) do
 
   create_table "items", force: true do |t|
-    t.integer  "item_id"
-    t.string   "product"
+    t.integer  "product_id", limit: 255
     t.string   "quantity"
-    t.string   "place"
+    t.integer  "place_id",   limit: 255
     t.integer  "list_id"
     t.datetime "created_at"
     t.datetime "updated_at"

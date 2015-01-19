@@ -2,17 +2,15 @@
 
 <table border = 1>
     <tr>
-      <td>1List ID</td>
-      <td>2List name</td>
-      <td>3User</td>
-      <td>4</td>
-      <td>5</td>
-      <td>6</td>
+      <td>List name</td>
+      <td>Creator/Updator</td>
+      <td></td>
+      <td></td>
+      <td></td>
     </tr>
 
     <% @lists.each do |list| %>
       <tr>
-        <td class="list_id"><%= list.list_id %></td
         <td class="list_name"><%= list.list_name %></td>
         <td class="user_email"><%= created_by_email(list.id)  %></td>
         <td class="link_to_Show"><%= link_to 'Show', list %></td>

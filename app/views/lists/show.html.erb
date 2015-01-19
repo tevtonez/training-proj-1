@@ -1,33 +1,43 @@
 <p id="notice"><%= notice %></p>
+<table cellpadding = 5>
+  <tr>
+    <td>
+      <strong><%= @list.list_name %></strong>
+    </td>
+    <td> | </td>
+    <td>
+      Created/Updated by:
+      <i><%= created_by_email(params[:id])  %></i>
+    </td>
+    <td> | </td>
+    <td>
+      <%= link_to 'Edit List', edit_list_path(@list) %>
+    </td>
+    <td> | </td>
+    <td>
+      <%= link_to 'Back to the Lists', lists_path %>
+    </td>
+  </tr>
+</table>
 
-<!-- <p>
-  <strong>List:</strong>
-  <%= @list.list_id %>
-</p>
--->
-<p>
-  <strong>List name:</strong>
-  <%= @list.list_name %>
-</p>
 
-<p>
-  <strong>User:</strong>
-  <%= curr_user_email %>
-</p>
-
-<%= link_to 'Edit', edit_list_path(@list) %> |
-<%= link_to 'Back', lists_path %>
+<%=
+  print "test is here:"
+  print checking_if_tems_in_list(params[:id])
+  if checking_if_tems_in_list(params[:id]) == true 
+     "The list is empty, add more items using form below!"
+  else
+     "we'll be showing items list here! ...But later"
+  end    
+%>
 
 <p>Add items to the list</p>
 
 <%= form_for :item do |f| %>
-<div class="field">
-    <%= f.label :item_id %><br>
-    <%= f.number_field :item_id %>
-  </div>
+
   <div class="field">
     <%= f.label :product %><br>
-    <%= f.text_field :product %>
+    <%= f.collection_select :article, Product.all.order(:article), :article, :article %>
   </div>
   <div class="field">
     <%= f.label :quantity %><br>
@@ -35,12 +45,11 @@
   </div>
   <div class="field">
     <%= f.label :place %><br>
-    <%= f.text_field :place %>
+    <%= f.collection_select :place, Place.all.order(:title), :title, :title %>
   </div>
   <div class="field">
     <%= f.label :list_id %><br>
-    <%=
-      f.number_field :list_id, :value => curr_list_id, :readonly => true %>
+    <%= f.number_field :list_id, :value => curr_list_id, :readonly => true %>
   </div>
   <%= f.submit %>
 <% end %>

@@ -24,5 +24,5 @@ I'm writing this app for educational purposes.
 
 * Deployment instructions
 
-* spent time: 16 hrs
+* spent time: 17 hrs
 

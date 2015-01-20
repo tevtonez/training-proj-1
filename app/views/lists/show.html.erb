@@ -21,14 +21,31 @@
 </table>
 
 
-<%=
-  print "test is here:"
+<%
   print checking_if_tems_in_list(params[:id])
   if checking_if_tems_in_list(params[:id]) == true 
      "The list is empty, add more items using form below!"
   else
-     "we'll be showing items list here! ...But later"
-  end    
+%>
+  <p>The items in this list are:</p>
+  <table>
+    <tr>
+      <td>Product</td>
+      <td>Quantity</td>
+      <td>Shop</td>
+    </tr>
+    
+    <% find_list_tems(params[:id]).each  do |listitem|%>
+    <tr>
+      <td><%= product_name_for_list(listitem[:product_id]) %></td>
+      <td><%= listitem[:quantity] %></td>
+      <td><%= place_name_for_list(listitem[:place_id]) %></td>
+    </tr>
+    <% end %>
+  </table>
+  
+<%
+  end
 %>
 
 <p>Add items to the list</p>

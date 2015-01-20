@@ -39,6 +39,24 @@ def checking_if_tems_in_list(id)
   return list_empty
 end
 
+## find all the items that belong to the list
+def find_list_tems(id)
+  items = Item.where(list_id: id)
+  return items
+end
+
+## getting product name
+def product_name_for_list(id)
+  product_name = Product.find(id)[:article]
+  return product_name
+end
+
+## getting place name
+def place_name_for_list(id)
+  place_name = Place.find(id)[:title]
+  return place_name
+end
+
 =begin
 def test_umm
   a = 4+4

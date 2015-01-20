@@ -1,10 +1,11 @@
 <p id="notice"><%= notice %></p>
 <table cellpadding = 5>
   <tr>
-    <td>
-      <strong><%= @list.list_name %></strong>
+    <td colspan=6>
+      <h2><%= @list.list_name %></h2>
     </td>
-    <td> | </td>
+  </tr>
+  <tr>
     <td>
       Created/Updated by:
       <i><%= created_by_email(params[:id])  %></i>
@@ -33,6 +34,8 @@
       <td>Product</td>
       <td>Quantity</td>
       <td>Shop</td>
+      <td></td>
+      <td></td>
     </tr>
     
     <% find_list_tems(params[:id]).each  do |listitem|%>
@@ -40,6 +43,9 @@
       <td><%= product_name_for_list(listitem[:product_id]) %></td>
       <td><%= listitem[:quantity] %></td>
       <td><%= place_name_for_list(listitem[:place_id]) %></td>
+      <td><%= link_to 'Edit', edit_item_path(Item.find(listitem[:id])) %> </td>
+      <td><%= link_to 'Del', listitem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td></td>
     </tr>
     <% end %>
   </table>

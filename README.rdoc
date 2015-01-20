@@ -4,7 +4,6 @@ I'm writing this app for educational purposes.
 
 == Issues
 1. The message "Item updated/created" is duplicated at the top of the page.
-2. collection_select puts 'nil' into DB
 
 
 == Tech Info

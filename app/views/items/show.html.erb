@@ -2,7 +2,7 @@
 
 <p>
   <strong>Product ID:</strong>
-  <%= @item.product_id %>
+  <%= product_name(params[:id]) %>
 </p>
 
 <p>
@@ -11,8 +11,8 @@
 </p>
 
 <p>
-  <strong>Place ID:</strong>
-  <%= @item.place_id %>
+  <strong>Place name:</strong>
+  <%= place_name(params[:id]) %>
 </p>
 
 <p>

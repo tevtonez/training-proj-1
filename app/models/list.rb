@@ -3,27 +3,32 @@ class List < ActiveRecord::Base
   belongs_to :user
 end
 
+## getting current list ID
 def curr_list_id
   l = List.find(params[:id])[:id]
   return l
 end
 
+## getting current user email
 def curr_user_email
   e = User.find(current_user)[:email]
   return e
 end
 
+## getting list's creator ID
 def created_by_id(id)
   listcreatorid = List.find(id)[:user_id]
   return listcreatorid
 end
 
+## getting list's creator email
 def created_by_email(id)
   userid = List.find(id)[:user_id]
   listcreatoremail = User.find(userid)[:email]
   return listcreatoremail
 end
 
+## verifying if the list has items
 def checking_if_tems_in_list(id)
   items = Item.where(list_id: id).count
   if items > 0
@@ -34,7 +39,9 @@ def checking_if_tems_in_list(id)
   return list_empty
 end
 
+=begin
 def test_umm
   a = 4+4
   return a
 end
+=end

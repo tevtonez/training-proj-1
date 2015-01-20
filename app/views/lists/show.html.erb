@@ -60,7 +60,7 @@
 
   <div class="field">
     <%= f.label :product %><br>
-    <%= f.collection_select :article, Product.all.order(:article), :article, :article %>
+    <%= f.collection_select :product_id, Product.all.order(:article), :id, :article %>
   </div>
   <div class="field">
     <%= f.label :quantity %><br>
@@ -68,7 +68,7 @@
   </div>
   <div class="field">
     <%= f.label :place %><br>
-    <%= f.collection_select :place, Place.all.order(:title), :title, :title %>
+    <%= f.collection_select :place_id, Place.all.order(:title), :id, :title %>
   </div>
   <div class="field">
     <%= f.label :list_id %><br>

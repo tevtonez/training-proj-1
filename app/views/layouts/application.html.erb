@@ -7,8 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  
+  <% flash.each do |flash_type, flash_message| %>
+    <p class="<%= flash_type %>"><%= flash_message %></p>
+  <% end %>
 
 <%= yield %>
 

@@ -1,6 +1,6 @@
 <table cellpadding = 5>
   <tr>
-    <td colspan=6>
+    <td colspan=7>
       <h2><%= @list.list_name %></h2>
     </td>
   </tr>
@@ -35,6 +35,7 @@
 %>
   <p>The items in this list are:</p>
   <table>
+    <thead>
     <tr>
       <td>Product</td>
       <td>Quantity</td>
@@ -42,7 +43,7 @@
       <td></td>
       <td></td>
     </tr>
-    
+    </thead>
     <% find_list_tems(params[:id]).each  do |listitem|%>
     <tr>
       <td><%= product_name_for_list(listitem[:product_id]) %></td>
@@ -50,7 +51,6 @@
       <td><%= place_name_for_list(listitem[:place_id]) %></td>
       <td><%= link_to 'Edit', edit_item_path(Item.find(listitem[:id])) %> </td>
       <td><%= link_to 'Del', listitem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      <td></td>
     </tr>
     <% end %>
   </table>

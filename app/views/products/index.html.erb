@@ -4,8 +4,6 @@
   <thead>
     <tr>
       <th>Article</th>
-      <th>Place</th>
-      <th></th>
       <th></th>
       <th></th>
     </tr>
@@ -15,10 +13,8 @@
     <% @products.each do |product| %>
       <tr>
         <td><%= product.article %></td>
-        <td><%= product.place %></td>
-        <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '[X]', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

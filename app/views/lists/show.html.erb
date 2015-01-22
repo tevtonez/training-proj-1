@@ -15,6 +15,10 @@
     </td>
     <td> | </td>
     <td>
+      <%= link_to '[X]', @list, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </td>
+    <td> | </td>
+    <td>
       <%= link_to 'Back to the Lists', lists_path %>
     </td>
   </tr>
@@ -23,8 +27,10 @@
 
 <%
   print checking_if_tems_in_list(params[:id])
-  if checking_if_tems_in_list(params[:id]) == true 
-     "The list is empty, add more items using form below!"
+  if checking_if_tems_in_list(params[:id]) == true
+%>
+     <p>The list is empty, add more items using form below!</p>
+<%
   else
 %>
   <p>The items in this list are:</p>

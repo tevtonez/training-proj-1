@@ -16,7 +16,7 @@ class ItemsController < ApplicationController
   # GET /items/new
   def new
     @item = Item.new
-    @current_list_id = item_params[:list_id]
+    #@current_list_id = item_params[:list_id]
   end
 
   # GET /items/1/edit

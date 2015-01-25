@@ -9,7 +9,6 @@
       <th>List_id</th>
       <th></th>
       <th></th>
-      <th></th>
     </tr>
   </thead>
 
@@ -20,9 +19,8 @@
         <td><%= item.quantity %></td>
         <td><%= place_name(item.id) %></td>
         <td><%= item.list_id %></td>
-        <td><%= link_to 'Show', item %></td>
         <td><%= link_to 'Edit', edit_item_path(item) %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '[X]', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

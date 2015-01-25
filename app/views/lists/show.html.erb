@@ -61,6 +61,7 @@
 
 <p>Add items to the list</p>
 
+<div class="small-4">
 <%= form_for @item do |f| %>
 
   <div class="field">
@@ -79,6 +80,6 @@
     <%= f.label :list_id %><br>
     <%= f.number_field :list_id, :value => curr_list_id, :readonly => true %>
   </div>
-  <%= f.submit %>
+  <%= f.submit :class => 'button' %>
 <% end %>
-
+</div>

@@ -18,9 +18,9 @@
         <td class="list_name"><%= list.list_name %></td>
         <td class="user_email"><%= created_by_email(list.id)  %></td>
         <td><%= Item.where(list_id: list.id).count %></td>
-        <td class="link_to_Show"><%= link_to 'Show', list %></td>
+        <td class="link_to_Show"><%= link_to 'View', list %></td>
         <td class="link_to_Edit"><%= link_to 'Edit', edit_list_path(list) %></td>
-        <td class="link_to_Destroy"><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="link_to_Destroy"><%= link_to '[X]', list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New List', new_list_path %>
+<%= link_to 'New List', new_list_path, class: "button" %>

@@ -1,4 +1,4 @@
-<%= form_for(@list) do |f| %>
+  <%= form_for(@list) do |f| %>
   <% if @list.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@list.errors.count, "error") %> prohibited this list from being saved:</h2>
@@ -15,11 +15,8 @@
     <%= f.label :list_name %><br>
     <%= f.text_field :list_name %>
   </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
     <%= f.hidden_field :user_id, :value => curr_user_id, :readonly => true %>
-  </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => 'button' %>
   </div>
 <% end %>

@@ -32,6 +32,8 @@
     padding: 8px 10px;
     float: left;
     width: 650px;
+    background-color: #FCF8D3 !important;
+    margin: 15px 0 0 -17px;
 }
 
 .top-bar .name {
@@ -41,7 +43,7 @@
 
 .top-bar .name a:hover,
 .top-bar .name a:active{
-    color: #fff;
+    color: #FC7400;
 }
 
 select {
@@ -57,3 +59,15 @@ select {
     background-repeat: no-repeat;
     float: left;
 }
+
+.main_block h1{
+    color: #2ba6cb;
+}
+
+.creator_email{
+    font-size: 12px;
+    color: #777;
+    font-style: italic;
+}
+
+

@@ -45,17 +45,28 @@ def find_list_items(id)
   return items
 end
 
-## getting product name
+## getting product name if the product exists
 def product_name_for_list(id)
-  product_name = Product.find(id)[:article]
-  return product_name
+  
+    if Product.exists?(id)
+      @product_name = Product.find(id)[:article]
+    else
+      @product_name = "This product had been removed"
+    end
+    return @product_name
 end
 
-## getting place name
+## getting place name if the place exists
 def place_name_for_list(id)
-  place_name = Place.find(id)[:title]
-  return place_name
+  if Place.exists?(id)
+    @place_name = Place.find(id)[:title]
+  else
+    @place_name = "This shop had been removed"
+  end
+  return @place_name
 end
+
+
 
 =begin
 def test_umm

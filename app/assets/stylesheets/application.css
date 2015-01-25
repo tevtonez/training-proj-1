@@ -41,9 +41,13 @@
     margin: 0 15px !important;
 }
 
-.top-bar .name a:hover,
-.top-bar .name a:active{
-    color: #FC7400;
+a:hover,
+a:active{
+    color: #FC7400 !important;
+}
+
+.button:hover{
+    color: #fff !important;
 }
 
 select {
@@ -70,4 +74,10 @@ select {
     font-style: italic;
 }
 
+.lists_table .list_name{
+    min-width: 300px;
+}
 
+thead th{
+    color: #777 !important;
+}

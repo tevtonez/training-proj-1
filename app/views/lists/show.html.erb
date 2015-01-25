@@ -1,7 +1,7 @@
 <table cellpadding = 5>
   <tr>
     <td colspan=7>
-      <h2><%= @list.list_name %></h2>
+      <h2><%= link_to @list.list_name , edit_list_path(@list), :title => "Click to edit"%></h2>
     </td>
   </tr>
   <tr>
@@ -9,15 +9,10 @@
       Created/Updated by:
       <i><%= created_by_email(params[:id])  %></i>
     </td>
-    <td> | </td>
-    <td>
-      <%= link_to 'Edit List', edit_list_path(@list) %>
-    </td>
-    <td> | </td>
+
     <td>
       <%= link_to '[X]', @list, method: :delete, data: { confirm: 'Are you sure?' } %>
     </td>
-    <td> | </td>
     <td>
       <%= link_to 'Back to the Lists', lists_path %>
     </td>
@@ -33,7 +28,7 @@
 <%
   else
 %>
-  <p>The items in this list are:</p>
+  <p>There are <b><%= find_list_items(params[:id]).count %> items</b> in this list:</p>
   <table>
     <thead>
     <tr>
@@ -44,7 +39,7 @@
       <td></td>
     </tr>
     </thead>
-    <% find_list_tems(params[:id]).each  do |listitem|%>
+    <% find_list_items(params[:id]).order(:place_id).each  do |listitem|%>
     <tr>
       <td><%= product_name_for_list(listitem[:product_id]) %></td>
       <td><%= listitem[:quantity] %></td>
@@ -65,21 +60,18 @@
 <%= form_for @item do |f| %>
 
   <div class="field">
-    <%= f.label :product %><br>
+    <%= f.label :product %>
     <%= f.collection_select :product_id, Product.all.order(:article), :id, :article %>
   </div>
   <div class="field">
-    <%= f.label :quantity %><br>
+    <%= f.label :quantity %>
     <%= f.text_field :quantity %>
   </div>
   <div class="field">
-    <%= f.label :place %><br>
+    <%= f.label :place %>
     <%= f.collection_select :place_id, Place.all.order(:title), :id, :title %>
   </div>
-  <div class="field">
-    <%= f.label :list_id %><br>
-    <%= f.number_field :list_id, :value => curr_list_id, :readonly => true %>
-  </div>
+    <%= f.hidden_field :list_id, :value => curr_list_id, :readonly => true %>
   <%= f.submit :class => 'button' %>
 <% end %>
 </div>

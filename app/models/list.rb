@@ -40,7 +40,7 @@ def checking_if_tems_in_list(id)
 end
 
 ## find all the items that belong to the list
-def find_list_tems(id)
+def find_list_items(id)
   items = Item.where(list_id: id)
   return items
 end

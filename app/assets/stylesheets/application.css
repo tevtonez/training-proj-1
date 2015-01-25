@@ -14,11 +14,14 @@
  */
 
 
-.top-bar .name {float: left; margin: 0 15px !important;}
-
 .content{
     width: 800px;
     margin: 0 auto;
+}
+
+.clear{
+    float: none;
+    clear: both;
 }
 
 .main_block{
@@ -27,6 +30,13 @@
 
 .top-bar{
     padding: 8px 10px;
+    float: left;
+    width: 650px;
+}
+
+.top-bar .name {
+    float: left;
+    margin: 0 15px !important;
 }
 
 .top-bar .name a:hover,
@@ -37,4 +47,13 @@
 select {
     font-size: 14px;
     padding: 4px 0;
+}
+
+.logo{
+    height: 160px;
+    width: 140px;
+    background-image: url(  logo.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    float: left;
 }

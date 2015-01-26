@@ -145,7 +145,7 @@ select {
 h2,
 h3
 {
-    color: #1184a1 !important;
+    color: #fc6400 !important;
 }
 
 .creator_email{
@@ -160,4 +160,28 @@ h3
 
 thead th{
     color: #777 !important;
+}
+
+.list_title_table td{
+    padding: 0 !important;
+}
+
+.list_title_table h1{
+    margin: 0 !important; 
+}
+
+td.creator_email{
+    padding: 3px 10px !important;
+}
+
+.list_title_table td.action_td{
+    background-color: #fff;
+    height: 20px;
+    width: 20px;
+    padding: 3px !important;
+}
+
+.list_title_table h1
+{
+    padding:0 0 0 10px !important;
 }

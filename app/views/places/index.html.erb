@@ -13,8 +13,8 @@
     <% @places.each do |place| %>
       <tr>
         <td><%= place.title %></td>
-        <td><%= link_to 'Edit', edit_place_path(place) %></td>
-        <td><%= link_to '[X]', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to image_tag("icon_edit.png"), edit_place_path(place) %></td>
+        <td><%= link_to image_tag("icon_delete.png"), place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

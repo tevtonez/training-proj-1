@@ -1,17 +1,17 @@
-<table cellpadding = 5 width=100%>
+<table cellpadding = 5 width=100%  class="list_title_table">
   <tr>
     <td  rowspan=3>
-      <h1><%= link_to @list.list_name , edit_list_path(@list), :title => "Click to edit list"%></h1>
+      <h1><%= @list.list_name %></h1>
     </td>
-    <td width=20><%= link_to 'edit' , edit_list_path(@list), :title => "Click to edit list"%></td>
+    <td class="action_td"><%= link_to image_tag("icon_edit.png") , edit_list_path(@list), :title => "Edit list"%></td>
   </tr>
   
   <tr>
-    <td colspan=2 style="background-color: #fff;"><%= link_to '<-', lists_path, :title => "Go back to Lists" %></td>
+    <td colspan=2  class="action_td"><%= link_to image_tag("icon_delete.png"), @list, method: :delete, data: { confirm: 'Are you sure?' }, :title => "Delete the list" %></td>
   </tr>
   
   <tr>
-    <td colspan=2><%= link_to '[X]', @list, method: :delete, data: { confirm: 'Are you sure?' }, :title => "Delete the list" %></td>
+    <td colspan=2  class="action_td"><%= link_to image_tag("icon_lists.png"), lists_path, :title => "Go back to Lists" %></td>
   </tr>
   
   <tr>
@@ -48,8 +48,8 @@
       <td><%=h product_name_for_list(listitem[:product_id]) %></td>
       <td><%= listitem[:quantity] %></td>
       <td><%= place_name_for_list(listitem[:place_id]) %></td>
-      <td><%= link_to 'Edit', edit_item_path(Item.find(listitem[:id])) %> </td>
-      <td><%= link_to '[X]', listitem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to image_tag("icon_edit.png"), edit_item_path(Item.find(listitem[:id])) %> </td>
+      <td><%= link_to image_tag("icon_delete.png"), listitem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
     <% end %>
   </table>

@@ -24,23 +24,6 @@
     clear: both;
 }
 
-.main_block{
-    padding: 0 20px;
-}
-
-.top-bar{
-    padding: 8px 10px;
-    float: left;
-    width: 650px;
-    background-color: #FCF8D3 !important;
-    margin: 15px 0 0 -17px;
-}
-
-.top-bar .name {
-    float: left;
-    margin: 0 15px !important;
-}
-
 a:hover,
 a:active{
     color: #FC7400 !important;
@@ -55,13 +38,59 @@ select {
     padding: 4px 0;
 }
 
+/* WARNINGS */
+
+.red{
+    color: red;
+}
+
+/* HEADER */
+
 .logo{
     height: 160px;
-    width: 140px;
-    background-image: url(  logo.png);
+    width: 125px;
+    margin: 0 0 0 10px;
+    background-image: url(logo.png);
     background-position: left;
     background-repeat: no-repeat;
     float: left;
+}
+
+.header{
+    background-image: url(header_back.png);
+    background-repeat: repeat-x;
+    background-position: 0 32px;
+    float: left;
+    width: 100%;
+}
+
+.moto{
+    font-style: italic;
+    font-size: 24px;
+    padding: 39px 0 0 25px;
+    float: left;
+    color: #fff;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+.top-bar{
+    padding: 8px 10px;
+    float: left;
+    width: 650px;
+    background: transparent !important;
+    margin: 10px 0 0 0 !important;
+}
+
+.top-bar .name {
+    float: left;
+    margin: 0 15px !important;
+}
+
+ /* CONTENT AREA */
+
+.main_block{
+    padding: 0 20px;
 }
 
 .main_block h1{

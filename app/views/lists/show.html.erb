@@ -5,7 +5,7 @@
     </td>
   </tr>
   <tr>
-    <td>
+    <td class="creator_email">
       Created/Updated by:
       <i><%= created_by_email(params[:id])  %></i>
     </td>
@@ -41,7 +41,7 @@
     </thead>
     <% find_list_items(params[:id]).order(:place_id).each  do |listitem|%>
     <tr>
-      <td><%= product_name_for_list(listitem[:product_id]) %></td>
+      <td><%=h product_name_for_list(listitem[:product_id]) %></td>
       <td><%= listitem[:quantity] %></td>
       <td><%= place_name_for_list(listitem[:place_id]) %></td>
       <td><%= link_to 'Edit', edit_item_path(Item.find(listitem[:id])) %> </td>

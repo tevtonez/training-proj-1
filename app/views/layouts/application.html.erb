@@ -23,37 +23,45 @@
   <body>
     
   <div class="content">
-    <div class="logo">
-      
+    <div class="header">
+      <div class="logo">
+        
+      </div>
+      <div class="moto">
+        organize your shopping
+      </div>
+      <% if current_user %>
+    
+        <nav class="top-bar" data-topbar role="navigation">
+          
+            <ul class="title-area">
+              <li class="name">
+                <%= link_to 'Lists', root_url %>
+              </li>
+              <li class="name">
+                <%= link_to 'Goods', products_url %>
+              </li>
+              <li class="name">
+                <%= link_to 'Shops', places_url %>
+              </li>
+              <li class="name">
+                Friends
+              </li>
+              <li class="name">
+                About
+              </li>
+            </ul>
+        </nav>
+        <div class="clear"> </div>
+      <% end %>
     </div>
-    
-  <% if current_user %>
-    
-    <nav class="top-bar" data-topbar role="navigation">
-      
-        <ul class="title-area">
-          <li class="name">
-            <%= link_to 'Lists', root_url %>
-          </li>
-          <li class="name">
-            <%= link_to 'Goods', products_url %>
-          </li>
-          <li class="name">
-            <%= link_to 'Shops', places_url %>
-          </li>
-          <li class="name">
-            Friends
-          </li>
-          <li class="name">
-            About
-          </li>
-        </ul>
-    </nav>
-    <div class="clear"> </div>
-    
+    <div class="clear"></div>
     <div class="main_block">
+    <% if current_user %>
 
-    <%= yield %>
+      
+
+      <%= yield %>
 
     <% else %>
       

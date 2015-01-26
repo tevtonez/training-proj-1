@@ -51,7 +51,8 @@ def product_name_for_list(id)
     if Product.exists?(id)
       @product_name = Product.find(id)[:article]
     else
-      @product_name = "This product had been removed"
+      @product_name = "<i class=\"red\">This product had been removed</i>"
+      @product_name = @product_name.html_safe
     end
     return @product_name
 end
@@ -61,7 +62,8 @@ def place_name_for_list(id)
   if Place.exists?(id)
     @place_name = Place.find(id)[:title]
   else
-    @place_name = "This shop had been removed"
+    @place_name = "<i class=\"red\">This shop had been removed</i>"
+    @place_name = @place_name.html_safe
   end
   return @place_name
 end

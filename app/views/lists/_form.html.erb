@@ -18,5 +18,7 @@
     <%= f.hidden_field :user_id, :value => curr_user_id, :readonly => true %>
   <div class="actions">
     <%= f.submit :class => 'button' %>
+    <%= link_to 'Cancel and Back to Lists', lists_path, :class => "button secondary" %>
+
   </div>
 <% end %>

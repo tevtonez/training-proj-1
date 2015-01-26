@@ -145,7 +145,7 @@ select {
 h2,
 h3
 {
-    color: #fc6400 !important;
+    color: #155896 !important;
 }
 
 .creator_email{
@@ -184,4 +184,19 @@ td.creator_email{
 .list_title_table h1
 {
     padding:0 0 0 10px !important;
+}
+
+/* BUTTONS */
+
+.secondary, .secondary:hover {
+    color: #777 !important;
+}
+
+.alert{
+    background-color: #FF7578 !important;
+    margin-left: 10px !important;
+}
+
+.alert:hover{
+    background-color: #FC4E52 !important;
 }

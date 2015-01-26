@@ -88,13 +88,64 @@ select {
 }
 
  /* CONTENT AREA */
+ /*============================================*/
+ 
+ /* Login form */
+ 
+.new_user{
+    width: 300px;
+}
+
+.login_table{
+    width: 100%;    
+}
+
+.login_table td{
+    vertical-align: top;
+    width: 50%;
+    padding: 20px;
+}
+
+#user_remember_me{
+    margin: 0 10px 10px 0 !important;
+}
+
+.signup_table{
+    border: none !important;
+    width: 100%;
+}
+
+.signup_table td{
+    width: 50%;
+    height: 60px;
+    padding: 10px;
+}
+
+.signup_table td .button{
+    margin-bottom: 0 !important;
+}
+
+.signup_table td.left{
+    text-align: left;
+}
+
+.signup_table td.right{
+    text-align: right;
+    padding-top: 20px;
+    font-size: 18px;
+}
+ 
+ /* Content elements */
 
 .main_block{
     padding: 0 20px;
 }
 
-.main_block h1{
-    color: #2ba6cb;
+.main_block h1,
+h2,
+h3
+{
+    color: #1184a1 !important;
 }
 
 .creator_email{

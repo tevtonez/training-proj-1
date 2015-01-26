@@ -1,21 +1,25 @@
-<table cellpadding = 5>
+<table cellpadding = 5 width=100%>
   <tr>
-    <td colspan=7>
-      <h2><%= link_to @list.list_name , edit_list_path(@list), :title => "Click to edit"%></h2>
+    <td  rowspan=3>
+      <h1><%= link_to @list.list_name , edit_list_path(@list), :title => "Click to edit list"%></h1>
     </td>
+    <td width=20><%= link_to 'edit' , edit_list_path(@list), :title => "Click to edit list"%></td>
   </tr>
+  
   <tr>
-    <td class="creator_email">
-      Created/Updated by:
+    <td colspan=2 style="background-color: #fff;"><%= link_to '<-', lists_path, :title => "Go back to Lists" %></td>
+  </tr>
+  
+  <tr>
+    <td colspan=2><%= link_to '[X]', @list, method: :delete, data: { confirm: 'Are you sure?' }, :title => "Delete the list" %></td>
+  </tr>
+  
+  <tr>
+    <td class="creator_email" colspan=2>
+      Created by:
       <i><%= created_by_email(params[:id])  %></i>
     </td>
 
-    <td>
-      <%= link_to '[X]', @list, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </td>
-    <td>
-      <%= link_to 'Back to the Lists', lists_path %>
-    </td>
   </tr>
 </table>
 
@@ -45,7 +49,7 @@
       <td><%= listitem[:quantity] %></td>
       <td><%= place_name_for_list(listitem[:place_id]) %></td>
       <td><%= link_to 'Edit', edit_item_path(Item.find(listitem[:id])) %> </td>
-      <td><%= link_to 'Del', listitem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to '[X]', listitem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
     <% end %>
   </table>

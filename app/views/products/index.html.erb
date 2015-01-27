@@ -13,8 +13,8 @@
     <% @products.each do |product| %>
       <tr>
         <td><%= product.article %></td>
-        <td><%= link_to image_tag("icon_edit.png"), edit_product_path(product) %></td>
-        <td><%= link_to image_tag("icon_delete.png"), product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to " ", edit_product_path(product), :title => "Edit Product", :class => "link_to_edit" %></td>
+        <td><%= link_to " ", product, method: :delete, data: { confirm: 'Are you sure?' }, :title => "Delete Product", :class => "link_to_del" %></td>
       </tr>
     <% end %>
   </tbody>

@@ -186,7 +186,7 @@ td.creator_email{
     padding:0 0 0 10px !important;
 }
 
-/* BUTTONS */
+/* BUTTONS  &  ICONS */
 
 .secondary, .secondary:hover {
     color: #777 !important;
@@ -199,4 +199,59 @@ td.creator_email{
 
 .alert:hover{
     background-color: #FC4E52 !important;
+}
+
+.secondary{
+    margin-left: 10px !important;  
+}
+
+a.link_to_del{
+    background-image: url(icon_delete.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+a.link_to_del:hover{
+    background-image: url(icon_delete_hover.png);
+}
+
+a.link_to_edit{
+    background-image: url(icon_edit.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+a.link_to_edit:hover{
+    background-image: url(icon_edit_hover2.png);
+}
+
+a.list_name{
+    background-image: url(icon_view.png);
+    background-repeat: no-repeat;
+    background-position: left 1px;
+    padding: 0 0 0 25px;
+    font-size: 16px;
+}
+
+a.list_name:hover{
+    background-image: url(icon_view_hover.png);
+}
+
+a.list_back{
+    background-image: url(icon_lists.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+a.list_back:hover{
+    background-image: url(icon_lists_hover.png);
 }

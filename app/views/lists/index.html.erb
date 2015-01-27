@@ -15,11 +15,11 @@
 
     <% @lists.each do |list| %>
       <tr>
-        <td class="list_name"><%= link_to (image_tag("icon_view.png")) + "  "  + list.list_name, list, :title => "View List" %></td>
+        <td class="list_name"><%= link_to list.list_name, list, :title => "View List", :class => "list_name"  %></td>
         <td class="creator_email"><%= created_by_email(list.id)  %></td>
         <td><%= Item.where(list_id: list.id).count %></td>
-        <td class="link_to_Edit"><%= link_to image_tag("icon_edit.png"), edit_list_path(list) %></td>
-        <td class="link_to_Destroy"><%= link_to image_tag("icon_delete.png"), list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to " ", edit_list_path(list), :title => "Edit List", :class => "link_to_edit" %></td>
+        <td><%= link_to " ", list, method: :delete, data: { confirm: 'Are you sure?' },:title => "Delete List", :class => "link_to_del" %></td>
       </tr>
     <% end %>
   

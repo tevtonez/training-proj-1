@@ -3,15 +3,15 @@
     <td  rowspan=3>
       <h1><%= @list.list_name %></h1>
     </td>
-    <td class="action_td"><%= link_to image_tag("icon_edit.png") , edit_list_path(@list), :title => "Edit list"%></td>
+    <td class="action_td"><%= link_to " " , edit_list_path(@list), :title => "Edit list", :class => "link_to_edit"%></td>
   </tr>
   
   <tr>
-    <td colspan=2  class="action_td"><%= link_to image_tag("icon_delete.png"), @list, method: :delete, data: { confirm: 'Are you sure?' }, :title => "Delete the list" %></td>
+    <td colspan=2  class="action_td"><%= link_to " ", @list, method: :delete, data: { confirm: 'Are you sure?' }, :title => "Delete List", :class => "link_to_del" %></td>
   </tr>
   
   <tr>
-    <td colspan=2  class="action_td"><%= link_to image_tag("icon_lists.png"), lists_path, :title => "Go back to Lists" %></td>
+    <td colspan=2  class="action_td"><%= link_to " ", lists_path, :title => "Go back to Lists", :class => "list_back" %></td>
   </tr>
   
   <tr>
@@ -48,8 +48,8 @@
       <td><%=h product_name_for_list(listitem[:product_id]) %></td>
       <td><%= listitem[:quantity] %></td>
       <td><%= place_name_for_list(listitem[:place_id]) %></td>
-      <td><%= link_to image_tag("icon_edit.png"), edit_item_path(Item.find(listitem[:id])) %> </td>
-      <td><%= link_to image_tag("icon_delete.png"), listitem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to " ", edit_item_path(Item.find(listitem[:id])), :class => "link_to_edit", :title => "Edit Item" %> </td>
+      <td><%= link_to " ", listitem, method: :delete, data: { confirm: 'Are you sure?' }, :title => "Delete Item" , :class => "link_to_del"%></td>
     </tr>
     <% end %>
   </table>

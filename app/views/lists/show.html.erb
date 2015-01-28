@@ -1,41 +1,33 @@
-<table cellpadding = 5 width=100%  class="list_title_table">
-  <tr>
-    <td  rowspan=3>
-      <h1><%= @list.list_name %></h1>
-    </td>
-    <td class="action_td"><%= link_to " " , edit_list_path(@list), :title => "Edit list", :class => "link_to_edit"%></td>
-  </tr>
-  
-  <tr>
-    <td colspan=2  class="action_td"><%= link_to " ", @list, method: :delete, data: { confirm: 'Are you sure?' }, :title => "Delete List", :class => "link_to_del" %></td>
-  </tr>
-  
-  <tr>
-    <td colspan=2  class="action_td"><%= link_to " ", lists_path, :title => "Go back to Lists", :class => "list_back" %></td>
-  </tr>
-  
-  <tr>
-    <td class="creator_email" colspan=2>
-      Created by:
-      <i><%= created_by_email(params[:id])  %></i>
-    </td>
-
-  </tr>
-</table>
-
-
 <table class="show_items_table">
   <tr>
     <td class="show_items_table_td_left">
+      
+      <table class="action_table">
+        <tr>
+          <td class="action_td"><%= link_to " " , edit_list_path(@list), :title => "Edit list", :class => "link_to_edit"%></td>
+        </tr>
+        <tr>
+          <td class="action_td"><%= link_to " ", @list, method: :delete, data: { confirm: 'Are you sure?' }, :title => "Delete List", :class => "link_to_del" %></td>
+        </tr>
+        <tr>
+          <td class="action_td"><%= link_to " ", lists_path, :title => "Go back to Lists", :class => "list_back" %></td>
+        </tr>
+      </table>
+      
+      <h1><%= @list.list_name %></h1>
+      <p class="creator_email">Created by: &nbsp; <%= created_by_email(params[:id])  %></p>
+      
+      <div class="clear"></div>
+      
       <%
         print checking_if_tems_in_list(params[:id])
         if checking_if_tems_in_list(params[:id]) == true
       %>
-           <p>The list is empty, add more items using form to the right.</p>
+           <p class="list_info">The list is empty, add more items using form to the right.</p>
       <%
         else
       %>
-        <p>There are <b><%= find_list_items(params[:id]).count %> items</b> in this list:</p>
+        <p class="list_info"><b><%= find_list_items(params[:id]).count %> items</b> in the list</p>
         <table>
           <thead>
           <tr>
@@ -62,9 +54,9 @@
       %>
     </td>
     <td class="show_items_table_td_right">
-      <p>Add New Item</p>
+      <h3>Add New Item</h3>
 
-      <div class="small-4">
+      <div class="small-12">
       <%= form_for @item,  html: {class: "add_item_form"}  do |f| %>
       
         <div class="field">

@@ -168,9 +168,38 @@ thead th{
     color: #777 !important;
 }
 
+.show_items_table_td_left h1{
+    margin: 0;
+}
 
-.list_title_table td.creator_email{
-    padding: 3px 10px !important;
+p.list_info{
+    color: #777;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+p.creator_email{
+    margin: 0;
+    padding: 0;
+}
+
+.show_items_table_td_left table.action_table{
+    width: 27px !important;
+    float: right;
+    border: none;
+}
+
+td.action_td{
+    height:20px;
+    width: 20px;
+}
+
+.action_table tr td{
+    background-color: #fff;
+}
+
+.action_table tr td.action_td{
+    padding:0 0 3px 0;
 }
 
 .list_title_table
@@ -189,11 +218,6 @@ thead th{
 
 }
 
-td.action_td{
-    height:20px;
-    width: 20px;
-}
-
 .list_title_table td.action_td{
     background-color: #fff;
     padding: 3px !important;
@@ -210,6 +234,11 @@ td.action_td{
 
 .show_items_table_td_right{
     width: 210px;
+    padding-left: 25px;
+}
+
+td.show_items_table_td_left{
+    width: 490px;
 }
 
 .show_items_table_td_left table{

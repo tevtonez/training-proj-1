@@ -1,7 +1,16 @@
 <div class="small-4">
-  <%= simple_form_for(@item) do |f| %>
+<%= form_for(@item) do |f| %>
+  <% if @item.errors.any? %>
+    <div id="error_explanation">
+      <p><%= pluralize(@item.errors.count, "error") %> prohibited this place from being saved:</p>
 
-<%= f.error_notification %>
+      <% @item.errors.full_messages.each do |msg| %>
+        <p><%= msg %></p>
+      <% end %>
+
+    </div>
+  <% end %>
+
 
   <div class="form-inputs">
     <%= f.label :product_id %><br>

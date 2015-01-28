@@ -2,6 +2,9 @@ class Item < ActiveRecord::Base
   belongs_to :list
   has_many :products
   has_many :places
+  
+  validates_presence_of :product_id, :place_id, :list_id, message: "One of the IDs wasn't sent"
+  
 end
   
 ## getting product name

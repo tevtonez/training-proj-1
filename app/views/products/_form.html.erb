@@ -1,9 +1,19 @@
-<%= simple_form_for(@product) do |f| %>
 
-<%= f.error_notification %>
+<%= form_for(@product) do |f| %>
+  <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <p><%= pluralize(@product.errors.count, "error") %> prohibited this place from being saved:</p>
+
+      <% @product.errors.full_messages.each do |msg| %>
+        <p><%= msg %></p>
+      <% end %>
+
+    </div>
+  <% end %>
+
 
   <div class="form-inputs">
-    <%= f.label :article %><br>
+    <%= f.label :article, "Article (Product title) *" %>
     <%= f.text_field :article %>
   </div>
 

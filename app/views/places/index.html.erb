@@ -13,8 +13,8 @@
     <% @places.each do |place| %>
       <tr>
         <td><%= place.title %></td>
-        <td><%= link_to " ", edit_place_path(place), :title => "Edit Shop", :class => "link_to_edit"%></td>
-        <td><%= link_to " ", place, method: :delete, data: { confirm: 'Are you sure?' }, :title => "Delete Shop", :class => "link_to_del"  %></td>
+        <td class="action_td"><%= link_to " ", edit_place_path(place), :title => "Edit Shop", :class => "link_to_edit"%></td>
+        <td class="action_td"><%= link_to " ", place, method: :delete, data: { confirm: 'Are you sure?' }, :title => "Delete Shop", :class => "link_to_del"  %></td>
       </tr>
     <% end %>
   </tbody>

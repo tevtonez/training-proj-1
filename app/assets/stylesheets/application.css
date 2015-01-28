@@ -134,6 +134,12 @@ select {
     padding-top: 20px;
     font-size: 18px;
 }
+
+/* Create new Item FORM */
+ 
+.add_item_form{
+    width: 200px !important;
+}
  
  /* Content elements */
 
@@ -163,7 +169,7 @@ thead th{
 }
 
 
-td.creator_email{
+.list_title_table td.creator_email{
     padding: 3px 10px !important;
 }
 
@@ -183,11 +189,35 @@ td.creator_email{
 
 }
 
+td.action_td{
+    height:20px;
+    width: 20px;
+}
+
 .list_title_table td.action_td{
     background-color: #fff;
-    height: 20px;
-    width: 20px;
     padding: 3px !important;
+}
+
+.show_items_table{
+    width: 100%;
+    border: none !important;
+}
+
+.show_items_table tr td{
+    vertical-align: top;
+}
+
+.show_items_table_td_right{
+    width: 210px;
+}
+
+.show_items_table_td_left table{
+    width: 495px;
+}
+
+.show_items_table_td_left table td.product_title_td{
+    width: 230px;
 }
 
 

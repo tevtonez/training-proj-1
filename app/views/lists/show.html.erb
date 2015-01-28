@@ -24,58 +24,69 @@
 </table>
 
 
-<%
-  print checking_if_tems_in_list(params[:id])
-  if checking_if_tems_in_list(params[:id]) == true
-%>
-     <p>The list is empty, add more items using form below!</p>
-<%
-  else
-%>
-  <p>There are <b><%= find_list_items(params[:id]).count %> items</b> in this list:</p>
-  <table>
-    <thead>
-    <tr>
-      <td>Product</td>
-      <td>Quantity</td>
-      <td>Shop</td>
-      <td></td>
-      <td></td>
-    </tr>
-    </thead>
-    <% find_list_items(params[:id]).order(:place_id).each  do |listitem|%>
-    <tr>
-      <td><%=h product_name_for_list(listitem[:product_id]) %></td>
-      <td><%= listitem[:quantity] %></td>
-      <td><%= place_name_for_list(listitem[:place_id]) %></td>
-      <td><%= link_to " ", edit_item_path(Item.find(listitem[:id])), :class => "link_to_edit", :title => "Edit Item" %> </td>
-      <td><%= link_to " ", listitem, method: :delete, data: { confirm: 'Are you sure?' }, :title => "Delete Item" , :class => "link_to_del"%></td>
-    </tr>
-    <% end %>
-  </table>
-  
-<%
-  end
-%>
+<table class="show_items_table">
+  <tr>
+    <td class="show_items_table_td_left">
+      <%
+        print checking_if_tems_in_list(params[:id])
+        if checking_if_tems_in_list(params[:id]) == true
+      %>
+           <p>The list is empty, add more items using form to the right.</p>
+      <%
+        else
+      %>
+        <p>There are <b><%= find_list_items(params[:id]).count %> items</b> in this list:</p>
+        <table>
+          <thead>
+          <tr>
+            <td class="product_title_td">Product</td>
+            <td>Quantity</td>
+            <td>Shop</td>
+            <td></td>
+            <td></td>
+          </tr>
+          </thead>
+          <% find_list_items(params[:id]).order(:place_id).each  do |listitem|%>
+          <tr>
+            <td><%=h product_name_for_list(listitem[:product_id]) %></td>
+            <td><%= listitem[:quantity] %></td>
+            <td><%= place_name_for_list(listitem[:place_id]) %></td>
+            <td class="action_td"><%= link_to " ", edit_item_path(Item.find(listitem[:id])), :class => "link_to_edit", :title => "Edit Item" %> </td>
+            <td class="action_td"><%= link_to " ", listitem, method: :delete, data: { confirm: 'Are you sure?' }, :title => "Delete Item" , :class => "link_to_del"%></td>
+          </tr>
+          <% end %>
+        </table>
+        
+      <%
+        end
+      %>
+    </td>
+    <td class="show_items_table_td_right">
+      <p>Add New Item</p>
 
-<p>Add items to the list</p>
+      <div class="small-4">
+      <%= form_for @item,  html: {class: "add_item_form"}  do |f| %>
+      
+        <div class="field">
+          <%= f.label :product %>
+          <%= f.collection_select :product_id, Product.all.order(:article), :id, :article %>
+        </div>
+        <div class="field">
+          <%= f.label :quantity %>
+          <%= f.text_field :quantity %>
+        </div>
+        <div class="field">
+          <%= f.label :place %>
+          <%= f.collection_select :place_id, Place.all.order(:title), :id, :title %>
+        </div>
+          <%= f.hidden_field :list_id, :value => curr_list_id, :readonly => true %>
+        <%= f.submit :class => 'button' %>
+      <% end %>
+      </div>
+    </td>
+  </tr>
+</table>
 
-<div class="small-4">
-<%= form_for @item do |f| %>
 
-  <div class="field">
-    <%= f.label :product %>
-    <%= f.collection_select :product_id, Product.all.order(:article), :id, :article %>
-  </div>
-  <div class="field">
-    <%= f.label :quantity %>
-    <%= f.text_field :quantity %>
-  </div>
-  <div class="field">
-    <%= f.label :place %>
-    <%= f.collection_select :place_id, Place.all.order(:title), :id, :title %>
-  </div>
-    <%= f.hidden_field :list_id, :value => curr_list_id, :readonly => true %>
-  <%= f.submit :class => 'button' %>
-<% end %>
-</div>
+
+

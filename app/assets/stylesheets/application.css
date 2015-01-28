@@ -239,6 +239,7 @@ td.action_td{
 
 td.show_items_table_td_left{
     width: 490px;
+    padding-left: 0;
 }
 
 .show_items_table_td_left table{
@@ -246,7 +247,7 @@ td.show_items_table_td_left{
 }
 
 .show_items_table_td_left table td.product_title_td{
-    width: 230px;
+    width: 220px;
 }
 
 

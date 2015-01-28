@@ -19,9 +19,9 @@
     <%= f.label :list_id %><br>
     <%= f.number_field :list_id %>
   </div>
-  
-  <div class="form-actions">
+</div>  
+  <div class="form-actions small-12">
     <%= f.submit :class => 'button' %>
+    <%= link_to 'Cancel and Back to List', list_path(@list_id_num), :class => "button secondary"  %>
   </div>
 <% end %>
-</div>

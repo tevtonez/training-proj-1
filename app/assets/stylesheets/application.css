@@ -326,3 +326,105 @@ a.list_back{
 a.list_back:hover{
     background-image: url(icon_lists_hover.png);
 }
+
+/* FOOTER */
+.footer{
+    background-color: #4CA4C8;
+    height: 195px;
+    background-repeat: repeat;
+    background-position: left top;
+    margin: 20px 0 0 0;
+}
+
+.footer h4{
+    color: #fff;
+    margin: 10px 0 5px 0;
+    
+}
+
+.subfooter{
+    color: #888;
+    font-size: 10px;
+    padding: 3px 1px 0 0;
+    margin: 0;
+    text-align: right;
+    margin: 0 0 20px 0;
+    height: 20px;
+}
+
+
+.subfooter .moto{
+    padding: 0 0 0 2px;
+    font-size: 14px;
+    color: #4ca4c8;
+    font-weight: 300;
+}
+
+.footer_left_widget,
+.footer_center_widget,
+.footer_right_widget{
+    float: left;
+    color: #fff;
+    font-size: 12px;
+}
+
+.footer_left_widget{
+    width: 150px;
+}
+
+.footer_center_widget{
+    margin: 0 25px;
+    width: 350px;
+}
+
+.footer_right_widget{
+    margin: 0 0 0 10px;
+    width: 240px;       
+}
+
+.footer_right_widget a{
+    color: #A4DDF5;
+}
+
+.footer_right_widget a:hover{
+    color: #fff !important;
+    text-decoration: underline;
+}
+
+.footer_right_widget h4{
+    margin-bottom: 10px;
+}
+
+.footer_right_widget img{
+    margin: 0 0 5px 0;
+}
+
+.footer_left_widget ul{
+    margin: 37px  0 0 0;
+}
+
+.footer_left_widget ul li{
+    list-style: inside circle;
+    padding: 0 0 0 22px;
+    font-size: 16px;
+}
+
+.footer_left_widget ul li a{
+    color: #A4DDF5;
+    font-size: 12px;
+    font-size: 16px;
+}
+
+.footer_left_widget ul li a:hover{
+    color: #fff !important;
+    text-decoration: underline;
+}
+
+.footer_center_widget p{
+    margin: 0 0 5px 0;
+    padding: 0;
+}
+
+
+
+

@@ -47,9 +47,7 @@
               <li class="name">
                 Friends
               </li>
-              <li class="name">
-                About
-              </li>
+
             </ul>
         </nav>
         <div class="clear"> </div>
@@ -70,6 +68,37 @@
     <% end %>
     
     </div>
+    
+    <div class="footer">
+      <div class="footer_left_widget">
+        <ul>
+          <li><%= link_to 'Lists', root_url %></li>
+          <li><%= link_to 'Goods', products_url %></li>
+          <li><%= link_to 'Shops', places_url %></li>
+          <li class="">Friends</li>
+        </ul>
+      </div>
+      
+      <div class="footer_center_widget">
+        <h4>About</h4>
+        <p>
+          WIth this application you will be able to create your shopping lists easily filling them with the products you regularly buy and then share the lists with your friends or family members or print them. If you do your shopping in the different places, this application will sort the items in the list by shopping places for you gracefully.
+        </p>
+        
+      </div>
+      
+      <div class="footer_right_widget">
+        <h4>Disclamer</h4>
+        <p>
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">'Organize your shopping application'</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://kosjak.ru" property="cc:attributionName" rel="cc:attributionURL">Konstantine</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/tevtonez/training-proj-1" rel="dct:source">github</a>.
+        </p>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="subfooter">
+      <div class="moto">
+        &copy; <%= Time.now.year %>&nbsp; organize your shopping
+      </div>    </div>
     <%= javascript_include_tag "application" %>
   </div>    
   </body>

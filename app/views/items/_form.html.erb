@@ -1,4 +1,4 @@
-<div class="small-4">
+<div class="small-7">
 <%= form_for(@item) do |f| %>
   <% if @item.errors.any? %>
     <div id="error_explanation">
@@ -12,25 +12,26 @@
   <% end %>
 
 
-  <div class="form-inputs">
-    <%= f.label :product_id %><br>
+  <div class="form-inputs small-8">
+    <%= f.label :product_id %>
     <%= f.collection_select :product_id, Product.all.order(:article), :id, :article %>    
 
 
-    <%= f.label :quantity %><br>
+    <%= f.label :quantity %>
     <%= f.text_field :quantity %>
 
 
-    <%= f.label :place_id %><br>
+    <%= f.label :place_id %>
     <%= f.collection_select :place_id, Place.all.order(:title), :id, :title %>
 
 
-    <%= f.label :list_id %><br>
+    <%= f.label :list_id %>
     <%= f.number_field :list_id %>
   </div>
-</div>  
-  <div class="form-actions small-12">
+
+  <div class="form-actions">
     <%= f.submit :class => 'button' %>
     <%= link_to 'Cancel and Back to List', list_path(@list_id_num), :class => "button secondary"  %>
   </div>
 <% end %>
+</div>  

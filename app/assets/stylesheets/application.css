@@ -234,12 +234,18 @@ td.action_td{
 
 .show_items_table_td_right{
     width: 210px;
-    padding-left: 25px;
+    padding-left: 46px;
+}
+
+.show_items_table_td_right h3{
+    margin-top: 0;
 }
 
 td.show_items_table_td_left{
-    width: 490px;
+    width: 480px;
     padding-left: 0;
+    padding-right: 0;
+    
 }
 
 .show_items_table_td_left table{

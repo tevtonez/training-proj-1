@@ -17,6 +17,11 @@
 .content{
     width: 800px;
     margin: 0 auto;
+    color: #444 !important;
+}
+
+table tr td{
+    color: #555 !important;
 }
 
 .clear{
@@ -36,6 +41,22 @@ a:active{
 select {
     font-size: 14px;
     padding: 4px 0;
+}
+
+.alignleft{
+    float: left;
+}
+
+.alignright{
+    float: right;
+}
+
+.aligncenter{
+    margin: 0 auto;
+}
+
+.textaligncenter{
+    text-align: center;
 }
 
 /* WARNINGS */

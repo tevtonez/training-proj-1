@@ -6,7 +6,7 @@
     <tr>
       <th>List name</th>
       <th>Creator/Updator</th>
-      <th># of items</th>
+      <th>Items</th>
       <th></th>
       <th></th>
     </tr>
@@ -17,7 +17,7 @@
       <tr>
         <td class="list_name"><%= link_to list.list_name, list, :title => "View List", :class => "list_name"  %></td>
         <td class="creator_email"><%= created_by_email(list.id)  %></td>
-        <td><%= Item.where(list_id: list.id).count %></td>
+        <td class="textaligncenter"><%= Item.where(list_id: list.id).count %></td>
         <td class="action_td"><%= link_to " ", edit_list_path(list), :title => "Edit List", :class => "link_to_edit" %></td>
         <td class="action_td"><%= link_to " ", list, method: :delete, data: { confirm: 'Are you sure?' },:title => "Delete List", :class => "link_to_del" %></td>
       </tr>

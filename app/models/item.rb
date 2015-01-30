@@ -21,3 +21,7 @@ def place_name(id)
   return place_name
 end
 
+## getting list ID
+def current_list_id(id)
+  #list_id = id
+end
